@@ -9,6 +9,11 @@
       "todo": "new",
       "status": false,
       "id": 2
+    },
+    {
+      "todo": "Finished",
+      "status": true,
+      "id": 3
     }
   ]
 }
