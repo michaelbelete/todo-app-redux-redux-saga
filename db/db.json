@@ -1,3 +1,14 @@
 {
-	"todos" : [{"id": 1, "todo": "hello, world", "status": false}]
+  "todos": [
+    {
+      "id": 1,
+      "todo": "hello, world",
+      "status": false
+    },
+    {
+      "todo": "new",
+      "status": false,
+      "id": 2
+    }
+  ]
 }

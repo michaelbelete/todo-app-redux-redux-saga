@@ -3,6 +3,7 @@ import {
   GET_TODOS,
   GET_TODO,
   CREATE_TODO,
+  EDIT_TODO,
   DELETE_TODO,
 } from "../actions/todo-action";
 
@@ -32,6 +33,13 @@ const TodoSaga = (state = initialState, { type, payload }) => {
       };
 
     case CREATE_TODO:
+      return {
+        ...state,
+        todos: [payload, ...state.todos],
+        loading: false,
+      };
+    
+    case EDIT_TODO:
       return {
         ...state,
         todos: [payload, ...state.todos],

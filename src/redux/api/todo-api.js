@@ -23,3 +23,23 @@ export const createNewTodo = async (todo) => {
     console.log(error);
   }
 };
+
+export const updateExistingTodo = async (id, todo) => {
+  try {
+    const todo = await axios.put("todos", todo);
+    return todo.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+
+export const deleteExistingTodo = async (id) => {
+  try {
+    await axios.delete(`todos/${id}`)
+    return id
+  } catch(err) {
+     return console.error(err)
+  }
+}

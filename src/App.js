@@ -1,8 +1,7 @@
 import Todo from './components/todo'
 function App() {
   return (
-    <div className="App">
-      <h2>Todos</h2>
+    <div className="bg-gray-800 App">
       <Todo />
     </div>
   );
