@@ -3,10 +3,7 @@ import {
   GET_TODOS,
   GET_TODO,
   CREATE_TODO,
-  EDIT_TODO,
   DELETE_TODO,
-  CLEAR_TODO,
-  CHANGE_TODO_STATUS,
 } from "../actions/todo-action";
 
 const initialState = {
@@ -15,7 +12,7 @@ const initialState = {
   todo: null,
 };
 
-export default (state = initialState, { type, payload }) => {
+const TodoSaga = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_LOADING:
       return {
@@ -52,3 +49,5 @@ export default (state = initialState, { type, payload }) => {
         return state
   }
 };
+
+export default TodoSaga;
