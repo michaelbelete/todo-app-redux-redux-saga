@@ -21,8 +21,9 @@ const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo, updateTodo }) =>
       <div className="flex flex-col gap-2">
         <TodoForm />
         <div className="flex flex-col gap-4 p-4 mt-5 bg-gray-900 rounded">
-          {loading && "Loading"}
-          {todos &&
+          {loading && (<p className="text-white">Loading</p>)}
+          {todos && todos.length === 0 && (<p className="text-white">Empty Todo</p>)}
+          {todos && 
             todos.map((oneTodo, index) => (
               <TodoItem
                 todo={oneTodo}
