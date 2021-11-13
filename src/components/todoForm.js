@@ -23,7 +23,7 @@ const TodoForm = ({ createTodo }) => {
           }}
           required
         />
-        <button className="px-4 disabled={!todo} text-gray-400 bg-gray-900 rounded">
+        <button disabled={!todo} className="px-4 text-gray-400 bg-gray-900 rounded-tr rounded-br">
           Add
         </button>
       </div>

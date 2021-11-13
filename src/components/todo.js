@@ -22,7 +22,7 @@ const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo, updateTodo }) =>
         <TodoForm />
         <div className="flex flex-col gap-4 p-4 mt-5 bg-gray-900 rounded">
           {loading && (<p className="text-white">Loading</p>)}
-          {todos && todos.length === 0 && (<p className="text-white">Empty Todo</p>)}
+          {todos && todos.length === 0 && (<p className="text-white">No Todos yet get started by adding some</p>)}
           {todos && 
             todos.map((oneTodo, index) => (
               <TodoItem
