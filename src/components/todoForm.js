@@ -21,6 +21,7 @@ const TodoForm = ({ createTodo }) => {
           onChange={(e) => {
             setTodo(e.target.value);
           }}
+          value={todo}
           required
         />
         <button disabled={!todo} className="px-4 text-gray-400 bg-gray-900 rounded-tr rounded-br">
