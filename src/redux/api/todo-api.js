@@ -2,7 +2,7 @@ import { axios } from "./index";
 
 export const getAllTodos = async () => {
   try {
-    const todos = await axios.get("todos?_page=1&_limit=10");
+    const todos = await axios.get("todos?_page=1&_limit=10&_sort=id&_order=desc");
     return todos.data;
   } catch (error) {
     console.error(error);
@@ -11,14 +11,13 @@ export const getAllTodos = async () => {
 
 export const createNewTodo = async (todo) => {
   try {
-    const newTodo = {
+
+    const newTodo = await axios.post("todos", {
       todo: todo,
       status: false,
-    };
+    });
 
-    const todo = await axios.post("todos", newTodo);
-
-    return todo.data;
+    return newTodo.data;
   } catch (error) {
     console.log(error);
   }
