@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { CgTrash } from "react-icons/cg";
 const TodoItem = ({ todo, deleteTodo, checked }) => {
+  const check = () => {
+    todo.status = !todo.status
+    checked(todo) 
+  }
   return (
     <div className="flex flex-row justify-between items-start">
       <label className="inline-flex items-center">
@@ -9,7 +13,7 @@ const TodoItem = ({ todo, deleteTodo, checked }) => {
           type="checkbox"
           className="w-6 h-6 text-gray-900 bg-gray-900"
           checked={todo.status}
-          onClick={() => checked(todo.id)}
+          onClick={() => { check() }}
         />
         <span
           className={`ml-3 text-gray-400 ${todo.status ? "line-through" : ""}`}

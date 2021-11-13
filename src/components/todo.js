@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
-import { GET_TODOS_REQUEST, DELETE_TODO_REQUEST } from "../redux/actions/todo-action";
+import { GET_TODOS_REQUEST, DELETE_TODO_REQUEST, EDIT_TODO_REQUEST } from "../redux/actions/todo-action";
 
 import TodoForm from "./todoForm";
 import TodoItem from "./todoItem";
 
-const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo }) => {
+const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo, updateTodo }) => {
   useEffect(() => {
     getTodos();
     // eslint-disable-next-line
@@ -27,7 +27,7 @@ const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo }) => {
               <TodoItem
                 todo={oneTodo}
                 key={index}
-                checked={deleteTodo}
+                checked={updateTodo}
                 deleteTodo={deleteTodo}
               />
             ))}{" "}
@@ -42,6 +42,7 @@ Todo.propTypes = {
   todo: PropTypes.array,
   getTodos: PropTypes.func.isRequired,
   deleteTodo: PropTypes.func.isRequired,
+  updateTodo: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -50,7 +51,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getTodos: () => dispatch({ type: GET_TODOS_REQUEST }),
-  deleteTodo: (id) => dispatch({ type: DELETE_TODO_REQUEST, payload: id })
+  deleteTodo: (id) => dispatch({ type: DELETE_TODO_REQUEST, payload: id }),
+  updateTodo: (todo) => dispatch({ type: EDIT_TODO_REQUEST, payload: todo})
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);

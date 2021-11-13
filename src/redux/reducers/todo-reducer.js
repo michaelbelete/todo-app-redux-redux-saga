@@ -42,7 +42,7 @@ const TodoSaga = (state = initialState, { type, payload }) => {
     case EDIT_TODO:
       return {
         ...state,
-        todos: [payload, ...state.todos],
+        todos: [...state.todos],
         loading: false,
       };
 

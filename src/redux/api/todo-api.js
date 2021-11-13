@@ -24,9 +24,9 @@ export const createNewTodo = async (todo) => {
   }
 };
 
-export const updateExistingTodo = async (id, todo) => {
+export const updateExistingTodo = async (todo) => {
   try {
-    const updatedTodo = await axios.put(`todos/${id}`, todo);
+    const updatedTodo = await axios.put(`todos/${todo.id}`, todo);
     return updatedTodo.data;
   } catch (error) {
     console.log(error);
