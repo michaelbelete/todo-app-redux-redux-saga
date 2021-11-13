@@ -28,7 +28,7 @@ const Todo = ({ todo: { loading, todos }, getTodos, deleteTodo, updateTodo }) =>
               <TodoItem
                 todo={oneTodo}
                 key={index}
-                checked={updateTodo}
+                updateTodo={updateTodo}
                 deleteTodo={deleteTodo}
               />
             ))}{" "}
