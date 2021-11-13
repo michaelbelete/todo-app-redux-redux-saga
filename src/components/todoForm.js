@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { CgPlayListAdd } from "react-icons/cg";
 import { connect } from "react-redux";
-import { CREATE_TODO_REQUEST, EDIT_TODO } from "../redux/actions/todo-action";
+import { CREATE_TODO_REQUEST } from "../redux/actions/todo-action";
 const TodoForm = ({ createTodo }) => {
   const [todo, setTodo] = useState();
   const onSubmit = (e) => {
