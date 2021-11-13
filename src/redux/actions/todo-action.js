@@ -14,7 +14,7 @@ export const DELETE_TODO = "DELETE_TODO";
 export const DELETE_TODO_REQUEST = "DELETE_TODO_REQUEST";
 
 export const EDIT_TODO = "EDIT_TODO";
-export const EDIT_TODO_TODOS = "EDIT_TODO_TODOS";
+export const EDIT_TODO_REQUEST = "EDIT_TODO_REQUEST";
 
 export const CLEAR_TODO = "CLEAR_TODO";
 export const CLEAR_TODO_TODOS = "CLEAR_TODO_TODOS";

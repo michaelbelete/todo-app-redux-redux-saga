@@ -1,24 +1,3 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "todo": "hello, world",
-      "status": false
-    },
-    {
-      "todo": "new",
-      "status": false,
-      "id": 2
-    },
-    {
-      "todo": "Finished",
-      "status": true,
-      "id": 3
-    },
-    {
-      "todo": "Finished",
-      "status": true,
-      "id": 4
-    }
-  ]
+  "todos": []
 }
