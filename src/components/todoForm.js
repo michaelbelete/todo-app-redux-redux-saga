@@ -7,6 +7,7 @@ const TodoForm = ({ createTodo }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     createTodo(todo);
+    setTodo("");
   };
 
   return (
