@@ -1,9 +1,3 @@
 {
-  "todos": [
-    {
-      "todo": "sdf",
-      "status": false,
-      "id": 1
-    }
-  ]
+  "todos": []
 }

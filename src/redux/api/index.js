@@ -1,6 +1,6 @@
-import defaultAxios from 'axios';
+import defaultAxios from "axios";
 
 export const axios = defaultAxios.create({
-    baseURL: 'http://localhost:8080/',
-    headers: { 'Content-Type': 'application/json' }
+  baseURL: "https://mike-json-server.herokuapp.com/",
+  headers: { "Content-Type": "application/json" },
 });
